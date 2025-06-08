@@ -1,1 +1,7 @@
+erdiagram Reciclagem
+notation = chen
 
+entity Cliente{}
+entity Doador extends Cliente{}
+entity Empresa extends Cliente{}
+entity Instituicao extends Cliente{}
