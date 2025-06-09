@@ -5,3 +5,9 @@ entity Cliente{}
 entity Doador extends Cliente{}
 entity Empresa extends Cliente{}
 entity Instituicao extends Cliente{}
+entity Item{}
+entity Servico{}
+
+relationship Publicacao{
+    Empresa[0..N] -> Servico[0..N]
+}
