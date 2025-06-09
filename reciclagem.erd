@@ -1,13 +1,69 @@
 erdiagram Reciclagem
 notation = chen
 
-entity Cliente{}
-entity Doador extends Cliente{}
-entity Empresa extends Cliente{}
-entity Instituicao extends Cliente{}
-entity Item{}
-entity Servico{}
+entity Usuario {
+  nome key
+  tipo // atributo obrigatório
+  email optional 
+}
 
-relationship Publicacao{
-    Empresa[0..N] -> Servico[0..N]
+entity Doador extends Usuario {}
+entity Empresa extends Usuario {}
+entity Instituicao extends Usuario {}
+
+entity Item {
+  codigo key
+  nome // atributo obrigatório
+  Descricao
+  Categoria
+  Data_Cadastro
+  Status
+}
+
+entity Solicitacao {
+  codigo
+  data
+  status
+}
+
+entity PontoColeta {
+  ID_Ponto
+  Endereco
+  Horario_Funcionamento
+}
+
+entity Notificacao {
+  ID_Notificacao
+  Conteudo
+  Data_Envio
+  Tipo
+}
+
+entity Servico {
+  ID_Servico
+  Descricao
+}
+
+relationship Cadastro {
+  Doador[1] -> Item[0..N]
+}
+
+relationship Solicita {
+  Instituicao[1] -> Solicitação[0..N]
+}
+
+relationship Refere {
+  Solicitação[1] -> Item[1]
+}
+
+relationship Localizado {
+  Item[0..N] -> PontoColeta[1]
+}
+
+relationship Recebe {
+  Usuario[1] -> Notificacao[0..N]
+}
+
+relationship Publica {
+  Empresa[1] -> Servico[0..N]
 }
