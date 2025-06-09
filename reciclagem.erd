@@ -7,63 +7,69 @@ entity Usuario {
   email optional 
 }
 
-entity Doador extends Usuario {}
-entity Empresa extends Usuario {}
-entity Instituicao extends Usuario {}
+entity Doador extends Usuario {
+    cpf key
+    telefone multivalued
+}
+
+entity Empresa extends Usuario {
+    cnpj key
+}
+
+entity Instituicao extends Usuario {
+    cnpj key
+}
 
 entity Item {
   codigo key
   nome // atributo obrigatório
-  Descricao
-  Categoria
-  Data_Cadastro
-  Status
+  descricao
+  categoria
 }
 
 entity Solicitacao {
-  codigo
+  codigo key
   data
   status
 }
 
 entity PontoColeta {
-  ID_Ponto
-  Endereco
-  Horario_Funcionamento
+  codigo key
+  endereco
+  horario
 }
 
 entity Notificacao {
-  ID_Notificacao
-  Conteudo
-  Data_Envio
-  Tipo
+  codigo key
+  conteudo
+  data_envio
 }
 
 entity Servico {
-  ID_Servico
-  Descricao
+  codigo key
+  descricao
 }
 
 relationship Cadastro {
-  Doador[1] -> Item[0..N]
+  Doador[1..N] -> Item[0..N]
 }
 
 relationship Solicita {
-  Instituicao[1] -> Solicitação[0..N]
+  Instituicao[1..1] -> Solicitacao[0..N]
 }
 
 relationship Refere {
-  Solicitação[1] -> Item[1]
+  Solicitacao[1..1] -> Item[1..1]
 }
 
 relationship Localizado {
-  Item[0..N] -> PontoColeta[1]
+  Item[0..N] -> PontoColeta[1..1]
 }
 
 relationship Recebe {
-  Usuario[1] -> Notificacao[0..N]
+  Usuario[1..1] -> Notificacao[0..N]
 }
 
 relationship Publica {
-  Empresa[1] -> Servico[0..N]
+  Empresa[1..1] -> Servico[0..N]
 }
