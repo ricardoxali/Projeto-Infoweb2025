@@ -5,4 +5,4 @@ Objetivo do produto:
 Evitar o descarte incorreto de produtos não biodegradáveis e reaproveitar seu material para produzir outros produtos.
 
 Principais Funcionalidades:
-Cadastro das doações
+O doador pode cadastrar o produto que quer doar e visualizar os pontos de coleta. Já a empresa recebedora da doação visualiza
