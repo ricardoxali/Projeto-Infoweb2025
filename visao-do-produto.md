@@ -11,8 +11,8 @@ Público Alvo:
 Pessoas que querem ser mais sustentáveis e ajudar pessoas carentes e empresas que já trabalham nesse ramo
 
 Restrições e Premissas:
-- O sistema será desenvolvido para acesso via web
-- Necessidade de acesso à internet para acessar as funcionalidades
+- O sistema será desenvolvido para acesso via web.
+- Necessidade de acesso à internet para acessar as funcionalidades.
 - Usuários terão acesso a dispositivos com conexão estável à internet.
 - Empresas participantes já possuem cadastro prévio e autorização para atuar no ramo de reciclagem e distribuição.
 - Pontos de coleta já estarão definidos e devidamente sinalizados.
