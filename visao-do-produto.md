@@ -8,7 +8,7 @@ Principais Funcionalidades:
 O doador pode cadastrar o produto que quer doar e visualizar os pontos de coleta. Já a empresa recebedora da doação visualiza os tipos de doações disponíveis nos pontos de coleta. A empresa distribuidora dos novos produtos visualiza quais produtos estão sendo necessários para produzirem. A empresa/instituição de pessoas carentes pode solicitar produtos que estão precisando.
 
 Público Alvo:
-Pessoas que querem ser mais sustentáveis e ajudar pessoas carentes e empresas que já trabalham nesse ramo
+Pessoas que querem ser mais sustentáveis e ajudar pessoas carentes e empresas que já trabalham nesse ramo.
 
 Restrições e Premissas:
 - O sistema será desenvolvido para acesso via web.
